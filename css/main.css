@@ -1,0 +1,86 @@
+/* Border box declaration */
+html {
+  box-sizing: border-box;
+}
+/* inherit border-box on all elements in the universe and before and after */
+*, 
+*:before, 
+*:after {
+  box-sizing: inherit;
+}
+
+/*******************************************************
+ * MY GRID SYSTEM                                      *
+ * I wanted to try a 12 col grid system like bootstrap *
+ *******************************************************/
+/* .row::after 'if you float you must clear' */
+.row::after {
+	content:"";
+	display: table;
+	clear: both;
+}
+/* for each col setup the float and margin, and a height 
+   for internet explorer*/
+[class *='col-'] {
+	float: left;
+/* example for 4% margin col calculation: 
+ * 100 - 4 x (# of columns+1) =  remaining width / # of columns = width of each column
+ */
+	margin-left: 4%;
+	/*give it a height of one pixel for explorer, if we had a 
+	  box with nothing in it ie behaves badly*/
+	min-height: 1px;
+}
+ .col-1 {
+ 	/*13 margin spaces*/
+ 	width: 4%;
+ 	background-color: #0000ff;
+ }
+ .col-2 {
+ 	/*7 margin spaces*/
+	width: 12%;
+	background-color: #33ccff;
+ }
+ .col-3 {
+	width: 20%;
+	background-color: #009933;
+ }
+ .col-4 {
+	width: 28%;
+	background-color: #00ff99;
+ }
+ .col-5 {
+ 	/* 12/5 = 2.4 + 1 = 3.4 x 4 = 13.6 
+ 	   100 - 13.6 = 86.4 / 2.4 = 36*/
+	width: 36%
+	background-color: #ffff00;
+ }
+ .col-6 {
+	width: 44%;
+	background-color: #ffffcc;
+ }
+ .col-7 {
+    /* 12/7 = ((1.71428571 + 1) x -4 + 100) / (12/7) */
+	width: 52%%;
+	background-color: #ff0000;
+ }
+ .col-8 {
+	width: 60%;
+	background-color: #ff6699;
+ }
+ .col-9 {
+	width: 68%;
+	background-color: #ff9933;
+ }
+ .col-10 {
+	width: 76%;
+	background-color: #9900cc;
+ }
+ .col-11 {
+	width: 84%;
+	background-color: #cc99ff;
+ }
+ .col-12 {
+	width: 92%;
+	background-color: #ccffff;
+ }
