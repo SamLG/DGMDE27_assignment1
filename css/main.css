@@ -9,6 +9,57 @@ html {
   box-sizing: inherit;
 }
 
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	background-image: url("https://upload.wikimedia.org/wikipedia/commons/d/d6/Field-with-snow-champ-enneige.jpg");
+	background-size: cover;
+}
+.wrapper {
+	width: 97%;
+	/*limit width on upper end of screen sizes, because overly long lines of text are fatiguing to read
+	  this can be a design call*/
+	max-width: 1300px;
+	margin: 0 auto;
+	float: none;
+	background-color: rgba(255, 255, 255, .7);
+}
+div.row header {
+	background-color: white;
+}
+header h1{
+	font-family: 'Shadows Into Light', cursive;
+	text-align: center;
+}
+header h1 a {
+	color: black;
+	text-decoration: none;
+}
+div.row nav {
+	background-color: #49749c;
+}
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	overflow: auto;
+}
+nav ul li {
+	font-family: 'Cabin Condensed', sans-serif;
+}
+nav ul a {
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+	padding: 1em;
+	float: left;
+}
+nav ul a:hover {
+	color: #a16100;
+}
+h2 {
+	font-size: 1.3em;
+}
+
 /*******************************************************
  * MY GRID SYSTEM                                      *
  * I wanted to try a 12 col grid system like bootstrap *
@@ -23,64 +74,158 @@ html {
    for internet explorer*/
 [class *='col-'] {
 	float: left;
-/* example for 4% margin col calculation: 
- * 100 - 4 x (# of columns+1) =  remaining width / # of columns = width of each column
- */
-	margin-left: 4%;
+/* example for 2% margin col calculation: 
+   100 - (2 x (# of columns+1)) =  remaining width / # of columns = width of each column
+   margin-left: 4%;*/
+	margin-left: 2%;
 	/*give it a height of one pixel for explorer, if we had a 
 	  box with nothing in it ie behaves badly*/
 	min-height: 1px;
-}
+	padding: 1em;
+	background-color: white;
+	position: relative;
+/*	border: 1px #cbd9e7 solid;
+*/}
  .col-1 {
  	/*13 margin spaces*/
- 	width: 4%;
- 	background-color: #0000ff;
- }
+	width: 6.166667% /*4%*/;
+/* 	background-color: #0000ff;
+*/ }
  .col-2 {
  	/*7 margin spaces*/
-	width: 12%;
-	background-color: #33ccff;
- }
+	width: 14.333333% /*12%*/;
+/*	background-color: #33ccff;
+*/ }
  .col-3 {
-	width: 20%;
-	background-color: #009933;
- }
+	width: 22.5% /*20%*/;
+/*	background-color: #009933;
+*/ }
  .col-4 {
-	width: 28%;
-	background-color: #00ff99;
- }
+	width: 30.666666% /*28%*/;
+/*	background-color: #00ff99;
+*/ }
  .col-5 {
- 	/* 12/5 = 2.4 + 1 = 3.4 x 4 = 13.6 
+ 	/* 12/5 = 2.4 + 1 = 3.4 x 2 = 13.6 
  	   100 - 13.6 = 86.4 / 2.4 = 36*/
-	width: 36%
-	background-color: #ffff00;
- }
+	width: 38.833333% /*36%*/;
+/*	background-color: #ffff00;
+*/ }
  .col-6 {
-	width: 44%;
-	background-color: #ffffcc;
- }
+	width: 47% /*44%*/;
+/*	background-color: #ffffcc;
+*/ }
  .col-7 {
-    /* 12/7 = ((1.71428571 + 1) x -4 + 100) / (12/7) */
-	width: 52%%;
-	background-color: #ff0000;
- }
+    /* 12/7 = ((1.71428571 + 1) x -2 + 100) / (12/7) */
+	width: 55.166666% /*52%*/;
+/*	background-color: #ff0000;
+*/ }
  .col-8 {
-	width: 60%;
-	background-color: #ff6699;
- }
+	width: 63.333333% /*60%*/;
+/*	background-color: #ff6699;
+*/ }
  .col-9 {
-	width: 68%;
-	background-color: #ff9933;
- }
+	width: 71.5% /*68%*/;
+/*	background-color: #ff9933;
+*/ }
  .col-10 {
-	width: 76%;
-	background-color: #9900cc;
- }
+	width: 79.666666% /*76%*/;
+/*	background-color: #9900cc;
+*/ }
  .col-11 {
-	width: 84%;
-	background-color: #cc99ff;
- }
+	width: 88.833333% /*84%*/;
+/*	background-color: #cc99ff;
+*/ }
  .col-12 {
-	width: 92%;
-	background-color: #ccffff;
- }
+	width: 96%/*92%*/;
+/*	background-color: #ccffff;
+*/ }
+
+.headline {
+	background-color: #cbd9e7;
+	background-image: url("https://upload.wikimedia.org/wikipedia/commons/f/f4/Parry_Peak_from_Winter_Park.JPG");
+	background-size: cover;
+	border: 1px white solid;
+}
+.row article {
+	background-color: #cbd9e7;
+}
+.headline h2 {
+	background-color: rgba(0, 0, 0, .4);
+	color: white;
+}
+.support {
+	border-bottom: 2px solid #49749c;
+}
+body div:nth-child(n+4) {
+	margin-bottom: 1em;
+}
+
+.side {
+	background-color: #fafaeb;
+}
+footer {
+	margin-top: 5em;
+	text-align: center;
+}
+
+/********************************************************************************************************/
+/* Responsive Menu Styling   adapted from http://www.w3schools.com/howto/howto_js_topnav.asp            */
+/********************************************************************************************************/
+
+  /* Remove margins and padding from the list, and add a black background color */
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+/*    background-color: #333;
+*/}
+
+/* Float the list items side by side */
+ul.topnav li {float: left;}
+
+/* Style the links inside the list items */
+ul.topnav li a {
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of links on hover */
+/*ul.topnav li a:hover {background-color: #555;}
+*/
+/* Hide the list item that contains the link that should open and close the topnav on small screens */
+ul.topnav li.icon {
+	display: none;
+}
+
+ /* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
+@media screen and (max-width:680px) {
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
+@media screen and (max-width:680px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}

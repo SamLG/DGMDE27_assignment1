@@ -4,7 +4,9 @@
 		<meta charset="UTF-8">
 		<title>Winter</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link href="css/normalize.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet"> 
+<!-- 		<link href="https://use.fontawesome.com/3827869be9.css" media="all" rel="stylesheet">
+ -->		<link href="css/normalize.css" rel="stylesheet">
 		<link rel="stylesheet" href="css/main.css">
 	</head>
 	<body>
@@ -20,7 +22,8 @@
 			<!-- navigation -->
 			<div class="row">
 				<nav class="col-12">
-					<ul>
+					<ul id="myTopnav" class="topnav">
+						<li class="icon"><a href="javascript:void(0);" onclick="myFunction()">&#9776;</a></li>
 						<li><a href="index.html">Home</a></li>
 						<li><a href="thisYear.html">This Year</a></li>
 						<li><a href="lastYear.html">Last Year</a></li>
@@ -30,9 +33,46 @@
 
 			<!-- main content -->
 			<div class="row">
-				<article class="col-10">Lorem ipsum Dolore non pariatur Excepteur eu exercitation ea aute sit reprehenderit. Lorem ipsum In amet ullamco pariatur pariatur ut consequat anim Excepteur veniam occaecat laborum. Lorem ipsum Est Excepteur pariatur quis Excepteur tempor proident aliqua nostrud irure. Lorem ipsum Anim sint do sit sint enim incididunt occaecat deserunt sit. Lorem ipsum Anim in ad laborum nostrud Excepteur Duis in qui dolore reprehenderit ut anim. Lorem ipsum In ea nostrud nostrud et deserunt. Lorem ipsum Ex irure consectetur do pariatur nulla ad qui eiusmod sed sunt. Lorem ipsum Cupidatat qui proident et amet anim sed nisi sit.</article>
-				<section class="col-2">Lorem ipsum Dolor adipisicing irure Duis consectetur ad do id. Lorem ipsum Aute nisi et in incididunt aute ullamco. Lorem ipsum Do aute laborum non laboris aliqua ut nulla quis. Lorem ipsum Esse commodo dolore veniam quis fugiat ad incididunt est minim officia cupidatat.</section>
+				<div class="col-12 headline">
+					<h2>Winter is a vital season in Vermont.</h2>
+					<p></p>
+				</div>
+			</div>
+			<div class="row">
+				<article class="col-9 support" data-key="sameHeights">Lorem ipsum Dolore non pariatur Excepteur eu exercitation ea aute sit reprehenderit. Lorem ipsum In amet ullamco pariatur pariatur ut consequat anim Excepteur veniam occaecat laborum. Lorem ipsum Est Excepteur pariatur quis Excepteur tempor proident aliqua nostrud irure. Lorem ipsum Anim sint do sit sint enim incididunt occaecat deserunt sit. Lorem ipsum Anim in ad laborum nostrud Excepteur Duis in qui dolore reprehenderit ut anim. Lorem ipsum In ea nostrud nostrud et deserunt. Lorem ipsum Ex irure consectetur do pariatur nulla ad qui eiusmod sed sunt. Lorem ipsum Cupidatat qui proident et amet anim sed nisi sit.</article>
+				<aside class="col-3 support side" data-key="sameHeights">Lorem ipsum Dolor adipisicing irure Duis consectetur ad do id. Lorem ipsum Aute nisi et in incididunt aute ullamco. Lorem ipsum Do aute laborum non laboris aliqua ut nulla quis. Lorem ipsum Esse commodo dolore veniam quis fugiat ad incididunt est minim officia cupidatat.</aside>
+			</div>
+			<div class="row">
+				<div class="col-2 support" data-key="otherSameHeights">Lorem ipsum Cillum dolor tempor sit cillum Duis culpa in nisi veniam Excepteur esse. Lorem ipsum Reprehenderit nostrud in fugiat labore ea quis in.</div>
+				<div class="col-2 support" data-key="otherSameHeights">Lorem ipsum Cillum dolor tempor sit cillum Duis culpa in nisi veniam Excepteur esse. Lorem ipsum Reprehenderit nostrud in fugiat labore ea quis in. Lorem ipsum Cillum amet consectetur ea cillum do sit et ea dolor non.</div>
+				<div class="col-2 support" data-key="otherSameHeights">Lorem ipsum Cillum dolor tempor sit cillum Duis culpa in nisi veniam Excepteur esse. Lorem ipsum Reprehenderit nostrud in fugiat labore ea quis in. Lorem ipsum Cillum officia consectetur velit ex eu. Lorem ipsum Ea consequat commodo enim ullamco laborum nulla sunt sunt in.</div>
+				<div class="col-2 support" data-key="otherSameHeights">Lorem ipsum Cillum dolor tempor sit cillum Duis culpa in nisi veniam Excepteur esse. Lorem ipsum Reprehenderit nostrud in fugiat labore ea quis in.</div>
+				<div class="col-2 support" data-key="otherSameHeights">Lorem ipsum Cillum dolor tempor sit cillum Duis culpa in nisi veniam Excepteur esse. Lorem ipsum Reprehenderit nostrud in fugiat labore ea quis in.</div>
+				<div class="col-2 support" data-key="otherSameHeights">Lorem ipsum Cillum dolor tempor sit cillum Duis culpa in nisi veniam Excepteur esse. Lorem ipsum Reprehenderit nostrud in fugiat labore ea quis in.</div>
+			</div>
+			<div class="row">
+				<footer class="col-12">&copy; Sam Grise 2017</footer>	
 			</div>
 		</div>
+		<script type="text/javascript" src="js/easypeasy.js"></script>
+		<script type="text/javascript">
+			if ('addEventListener' in window) {
+			    window.addEventListener('resize', function(){
+			        sameHeights();
+			    });
+			    window.addEventListener('load', function(){
+			        sameHeights();
+			    });
+
+			    // second group
+			    window.addEventListener('resize', function(){
+			        sameHeights('[data-key="otherSameHeights"]');
+			    });
+			    window.addEventListener('load', function(){
+			        sameHeights('[data-key="otherSameHeights"]');
+			    });
+			}
+		</script>
+		<script type="text/javascript" src="js/main.js"></script>
 	</body>
 </html>

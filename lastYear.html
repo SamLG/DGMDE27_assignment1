@@ -1,10 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-</head>
-<body>
-	
-</body>
+	<head>
+		<meta charset="UTF-8">
+		<title>Winter</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet"> 
+		<link href="css/normalize.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+	<body>
+		<div class="wrapper">
+
+			<!-- header -->
+			<div class="row">
+				<header class="col-12">
+					<h1><a href="index.html">Winter In Vermont</a></h1>
+				</header>
+			</div>
+
+			<!-- navigation -->
+			<div class="row">
+				<nav class="col-12">
+					<ul id="myTopnav" class="topnav">
+						<li class="icon"><a href="javascript:void(0);" onclick="myFunction()">&#9776;</a></li>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="thisYear.html">This Year</a></li>
+						<li><a href="lastYear.html">Last Year</a></li>
+					</ul>
+				</nav>
+			</div>
+
+			<!-- main content -->
+			<div class="row">
+				<div class="col-12 headline">
+					<h2>Last Winter Was Dissapointing.</h2>
+					<p></p>
+				</div>
+			</div>
+			<div class="row">
+				<article class="col-12 support">Lorem ipsum Dolore non pariatur Excepteur eu exercitation ea aute sit reprehenderit. Lorem ipsum In amet ullamco pariatur pariatur ut consequat anim Excepteur veniam occaecat laborum. Lorem ipsum Est Excepteur pariatur quis Excepteur tempor proident aliqua nostrud irure. Lorem ipsum Anim sint do sit sint enim incididunt occaecat deserunt sit. Lorem ipsum Anim in ad laborum nostrud Excepteur Duis in qui dolore reprehenderit ut anim. Lorem ipsum In ea nostrud nostrud et deserunt. Lorem ipsum Ex irure consectetur do pariatur nulla ad qui eiusmod sed sunt. Lorem ipsum Cupidatat qui proident et amet anim sed nisi sit.</article>
+			</div>
+			<div class="row">
+				<img src="" class="col-3 support">
+				<img src="" class="col-3 support">
+				<img src="" class="col-3 support">
+				<img src="" class="col-3 support">
+			</div>
+			<div class="row">
+				<footer class="col-12">&copy; Sam Grise 2017</footer>	
+			</div>
+		</div>
+		<script type="text/javascript" src="js/easypeasy.js"></script>
+		<script type="text/javascript">
+			if ('addEventListener' in window) {
+			    window.addEventListener('resize', function(){
+			        sameHeights();
+			    });
+			    window.addEventListener('load', function(){
+			        sameHeights();
+			    });
+
+			    // second group
+			    window.addEventListener('resize', function(){
+			        sameHeights('[data-key="otherSameHeights"]');
+			    });
+			    window.addEventListener('load', function(){
+			        sameHeights('[data-key="otherSameHeights"]');
+			    });
+			}
+		</script>
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
 </html>
