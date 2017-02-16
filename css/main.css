@@ -11,7 +11,7 @@ html {
 
 body {
 	font-family: Arial, Helvetica, sans-serif;
-	background-image: url("https://upload.wikimedia.org/wikipedia/commons/d/d6/Field-with-snow-champ-enneige.jpg");
+	background-image: url("../images/snow.jpg");
 	background-size: cover;
 }
 .wrapper {
