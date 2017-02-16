@@ -1,3 +1,7 @@
+<!-- DISCLAIMER I tried to fix easypeasy with various methods so that it would
+	 work appropriately. It only sets the height of the columns on load, and 
+	 then doesn't adjust ever again. It is supposed to resize on window 
+	 resize, but this is not working. I tried re-writing the js to fix the window resize, but it would not resize the elements. This means that overflow is a serious issue. I therefore removed easypeasy from the worst offenders the .headline div and following div, and instead used a method from https://css-tricks.com/fluid-width-equal-height-columns/, this method however does not work well for the more complex # of columns, creating unusual stacking which easypeasy does fix. -->
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -9,7 +13,7 @@
  -->		<link href="css/normalize.css" rel="stylesheet">
 		<link rel="stylesheet" href="css/main.css">
 	</head>
-	<body>
+	<body class="home">
 		<div class="wrapper">
 
 			<!-- header -->
@@ -38,17 +42,51 @@
 					<p></p>
 				</div>
 			</div>
-			<div class="row">
-				<article class="col-9 support" data-key="sameHeights">Lorem ipsum Dolore non pariatur Excepteur eu exercitation ea aute sit reprehenderit. Lorem ipsum In amet ullamco pariatur pariatur ut consequat anim Excepteur veniam occaecat laborum. Lorem ipsum Est Excepteur pariatur quis Excepteur tempor proident aliqua nostrud irure. Lorem ipsum Anim sint do sit sint enim incididunt occaecat deserunt sit. Lorem ipsum Anim in ad laborum nostrud Excepteur Duis in qui dolore reprehenderit ut anim. Lorem ipsum In ea nostrud nostrud et deserunt. Lorem ipsum Ex irure consectetur do pariatur nulla ad qui eiusmod sed sunt. Lorem ipsum Cupidatat qui proident et amet anim sed nisi sit.</article>
-				<aside class="col-3 support side" data-key="sameHeights">Lorem ipsum Dolor adipisicing irure Duis consectetur ad do id. Lorem ipsum Aute nisi et in incididunt aute ullamco. Lorem ipsum Do aute laborum non laboris aliqua ut nulla quis. Lorem ipsum Esse commodo dolore veniam quis fugiat ad incididunt est minim officia cupidatat.</aside>
+			<div class="row sameHeight">
+				<article class="col-9 md-col-8">&emsp;Winter in Vermont brings to mind, blankets of white snow, frosted pine trees, and children young and old enjoying the great outdoors. The iconic lyrics of Irving Berlin's "White Christmas" reflects the nostalgia and picturesque view of the idyllic white winter.
+					<section>
+						<h3>"White Christmas"</h3>
+						<p>I'm dreaming of a white Christmas<br>
+						Just like the ones I used to know<br>
+						Where the treetops glisten<br>
+						And children listen<br>
+						To hear sleigh bells in the snow<br>
+						... <br>
+						And may all your Christmases be white</p>
+						<cite>-Irving Berlin</cite>
+					</section>
+					<section>
+						<h3>"Moonlight In Vermont"</h3>
+						<p>Icey finger waves<br>
+						Ski trails on a mountain side<br>
+						Snowlight in Vermont</p>
+						<cite>-John Blackburn and Karl Suessdorf</cite>
+					</section>
+				</article>
+				<aside class="col-3 md-col-4 sm-col-12 side">
+					<ul>
+						<li>"White Christmas" (film)<a href="https://en.wikipedia.org/wiki/Moonlight_in_Vermont_(film)"><br> >> read more</a></li>
+						<li>"White Christmas" (song)<a href="https://en.wikipedia.org/wiki/White_Christmas_(song)"><br> >> read more</a></li>
+						<li>"Moonlight In Vermont" (song)<a href="https://en.wikipedia.org/wiki/White_Christmas_(film)"><br> >> read more</a></li>
+
+					</ul>
+				</aside>
 			</div>
 			<div class="row">
-				<div class="col-2 support" data-key="otherSameHeights">Lorem ipsum Cillum dolor tempor sit cillum Duis culpa in nisi veniam Excepteur esse. Lorem ipsum Reprehenderit nostrud in fugiat labore ea quis in.</div>
-				<div class="col-2 support" data-key="otherSameHeights">Lorem ipsum Cillum dolor tempor sit cillum Duis culpa in nisi veniam Excepteur esse. Lorem ipsum Reprehenderit nostrud in fugiat labore ea quis in. Lorem ipsum Cillum amet consectetur ea cillum do sit et ea dolor non.</div>
-				<div class="col-2 " data-key="otherSameHeights">Lorem ipsum Cillum dolor tempor sit cillum Duis culpa in nisi veniam Excepteur esse. Lorem ipsum Reprehenderit nostrud in fugiat labore ea quis in. Lorem ipsum Cillum officia consectetur velit ex eu. Lorem ipsum Ea consequat commodo enim ullamco laborum nulla sunt sunt in.</div>
-				<div class="col-2 support" data-key="otherSameHeights">Lorem ipsum Cillum dolor tempor sit cillum Duis culpa in nisi veniam Excepteur esse. Lorem ipsum Reprehenderit nostrud in fugiat labore ea quis in.</div>
-				<div class="col-2 support" data-key="otherSameHeights">Lorem ipsum Cillum dolor tempor sit cillum Duis culpa in nisi veniam Excepteur esse. Lorem ipsum Reprehenderit nostrud in fugiat labore ea quis in.</div>
-				<div class="col-2 support" data-key="otherSameHeights">Lorem ipsum Cillum dolor tempor sit cillum Duis culpa in nisi veniam Excepteur esse. Lorem ipsum Reprehenderit nostrud in fugiat labore ea quis in.</div>
+				<div class="col-3" data-key="sameHeights">
+					<h3>Pests</h3>
+					<p>&emsp;We need a very cold winter in Vermont to keep certain pests at bay. Keeping mosquito and tick populations in check relies heavily on long bouts of below freezing weather. What does this mean for New England, with these warm winters?</p>
+				</div>
+				<div class="col-3" data-key="sameHeights">
+					<h3>Skiing and Other Winter Activities</h3>
+					<p>&emsp;Vermont's economy relies on a good snowfall and cold weather. Many local businesses get the majority of their annual revenue during the winter months.</p>
+				</div>
+				<div class="col-3" data-key="sameHeights">
+					<h3>Other Winter Industries</h3>
+					<p>&emsp;Tourism in Vermont is very important. Visitors who don't want to ski or snowboard have other measn of entertainment. Many tourists just come to see the snow, like leafpeepers come in the fall to view the changing of the leaves. Without a winter wonderland for tourists to enjoy, local businesses suffer.</p></div>
+				<div class="col-3" data-key="sameHeights">
+					<h3>Happiness</h3>
+					<p>&emsp;For many Vermonters, myself included, if you have to put up with limited daylight, then the reward is beautiful snowy days. A cold or mild overcast days without snow make for mellow winters. Snow also serves as a reflector of light, upping our intake of vitamin d and literally making us happier.</p></div>
 			</div>
 			<div class="row">
 				<footer class="col-12">&copy; Sam Grise 2017</footer>	
