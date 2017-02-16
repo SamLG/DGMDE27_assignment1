@@ -68,7 +68,7 @@ nav ul a:hover {
 article picture {
 	float: right;
 }
-body div:nth-child(n+4)>div, body div:nth-child(n+4)>picture{
+body div:nth-child(n+4)>section, body div:nth-child(n+4)>div, body div:nth-child(n+4)>picture{
 	margin-top: 1em;
 }
 body div:nth-child(n+4) [class *='col-'] {
